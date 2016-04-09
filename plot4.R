@@ -61,3 +61,6 @@ legend("topright", title="", cex=1, c("Sub_metering_1", "Sub_metering_2", "Sub_m
 plot(courseraData$DateTime, courseraData$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime")
 dev.off()
 
+# Return graph layout to 1x1
+par(mfrow=c(1,1))
+

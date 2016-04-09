@@ -14,14 +14,14 @@ courseraData$DateTime <- as.POSIXct(strptime(paste(courseraData$Date, courseraDa
 
 
 # Create histogram of the Global active power from 2/1/2007 to 2/2/2007
-plot(courseraData$DateTime, courseraData$Sub_metering_1, type="l", ylab="Energy sub meeting", xlab="", width=480, height=480, units="px")
+plot(courseraData$DateTime, courseraData$Sub_metering_1, type="l", ylab="Energy sub meeting", xlab="")
 lines(courseraData$DateTime, courseraData$Sub_metering_2, type="l", col="red")
 lines(courseraData$DateTime, courseraData$Sub_metering_3, type="l", col="blue")
 legend("topright", title="", cex=1, c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=c("black", "red", "blue"))
 
 # Save the file as a .png 
-png("plot3.png")
-plot(courseraData$DateTime, courseraData$Sub_metering_1, type="l", ylab="Energy sub meeting", xlab="", width=480, height=480, units="px")
+png("plot3.png", width=480, height=480)
+plot(courseraData$DateTime, courseraData$Sub_metering_1, type="l", ylab="Energy sub meeting", xlab="")
 lines(courseraData$DateTime, courseraData$Sub_metering_2, type="l", col="red")
 lines(courseraData$DateTime, courseraData$Sub_metering_3, type="l", col="blue")
 legend("topright", title="", cex=1, c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=c("black", "red", "blue"))

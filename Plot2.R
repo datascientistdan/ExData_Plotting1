@@ -17,6 +17,6 @@ courseraData$DateTime <- as.POSIXct(strptime(paste(courseraData$Date, courseraDa
 plot(courseraData$DateTime, courseraData$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
 # Save the file as a .png 
-png("plot2.png")
-plot(courseraData$DateTime, courseraData$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="", width=480, height=480, units="px")
+png("plot2.png", width=480, height=480)
+plot(courseraData$DateTime, courseraData$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 dev.off()

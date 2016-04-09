@@ -17,6 +17,6 @@ courseraData$DateTime <- as.POSIXct(strptime(paste(courseraData$Date, courseraDa
 hist(courseraData$Global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 
 # Save the file as a .png 
-png('plot1.png')
-hist(courseraData$Global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", width=480, height=480, units="px")
+png('plot1.png', width=480, height=480)
+hist(courseraData$Global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 dev.off()
